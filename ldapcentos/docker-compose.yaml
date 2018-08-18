@@ -7,7 +7,6 @@ services:
       LDAP_ORGANISATION: "Example Inc."
     tty: true
     stdin_open: true
-    command: /bin/bash
     volumes:
       - ./var:/var/lib/ldap
       - ./etc:/etc/ldap
