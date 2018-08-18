@@ -1,0 +1,17 @@
+version: '2'
+services:
+  centos_openldap:
+    build: .
+    container_name: centos_openldap
+    environment:
+      LDAP_ORGANISATION: "Example Inc."
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    volumes:
+      - ./var:/var/lib/ldap
+      - ./etc:/etc/ldap
+    ports:
+      - "8390:389"
+      - "8637:636"
+
